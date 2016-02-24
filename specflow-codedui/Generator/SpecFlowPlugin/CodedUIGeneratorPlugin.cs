@@ -1,8 +1,8 @@
 ﻿using TechTalk.SpecFlow.Infrastructure;
 
-[assembly: GeneratorPlugin(typeof(TvD.SpecFlowPlugin.CodedUIGeneratorPlugin))]
+[assembly: GeneratorPlugin(typeof(TvDijk.SpecFlowPlugin.CodedUIGeneratorPlugin))]
 
-namespace TvD.SpecFlowPlugin
+namespace TvDijk.SpecFlowPlugin
 {
     using BoDi;
     using TechTalk.SpecFlow.Generator.Configuration;

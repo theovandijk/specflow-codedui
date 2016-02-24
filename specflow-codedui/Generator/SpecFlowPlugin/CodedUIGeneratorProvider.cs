@@ -1,4 +1,4 @@
-﻿namespace TvD.SpecFlowPlugin
+﻿namespace TvDijk.SpecFlowPlugin
 {
     using System.CodeDom;
     //using System.Configuration;

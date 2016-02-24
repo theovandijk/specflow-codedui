@@ -7,7 +7,7 @@
     <ProjectGuid>{05C4A02B-E0C3-4EAE-A0FE-A5203418B2D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TvD.SpecFlowPlugin</RootNamespace>
+    <RootNamespace>TvDijk.SpecFlowPlugin</RootNamespace>
     <AssemblyName>CodedUIGenerator.SpecflowPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,6 +68,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="specflow-codedui.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
