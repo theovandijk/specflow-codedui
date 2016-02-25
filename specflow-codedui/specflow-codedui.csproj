@@ -50,6 +50,7 @@
     <Reference Include="TechTalk.SpecFlow.Generator, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.CustomPlugin.2.0.0\lib\net45\TechTalk.SpecFlow.Generator.dll</HintPath>
       <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="TechTalk.SpecFlow.Parser, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.CustomPlugin.2.0.0\lib\net45\TechTalk.SpecFlow.Parser.dll</HintPath>

@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>$id$</id>
+    <id>TvDijk.SpecFlow.CodedUI</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>$author$</authors>
+    <authors>Theo van Dijk</authors>
     <licenseUrl>https://github.com/theovandijk/specflow-codedui/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/theovandijk/specflow-codedui/</projectUrl>
-    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <iconUrl>http://1drv.ms/1oKNl5c</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
     <copyright>Copyright 2016</copyright>
-    <tags>SpecFlow CodedUI</tags>    
+    <tags>SpecFlow CodedUI CUIT</tags>    
   </metadata>  
 </package>
