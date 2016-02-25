@@ -243,7 +243,9 @@
             return tags == null ? new string[0] : tags.Where(t =>
                 (!t.StartsWith(OWNER_TAG, StringComparison.InvariantCultureIgnoreCase))
                 && (!t.StartsWith(WORKITEM_TAG, StringComparison.InvariantCultureIgnoreCase)) 
-                && (!t.StartsWith(DATASOURCE_TAG, StringComparison.InvariantCultureIgnoreCase)))
+                // TODO implement datasource
+                //&& (!t.StartsWith(DATASOURCE_TAG, StringComparison.InvariantCultureIgnoreCase))
+                )
                 .Select(t => t);
         }
 

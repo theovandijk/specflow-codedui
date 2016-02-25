@@ -7,7 +7,7 @@
     <authors>$author$</authors>
     <licenseUrl>https://github.com/theovandijk/specflow-codedui/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/theovandijk/specflow-codedui/</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
