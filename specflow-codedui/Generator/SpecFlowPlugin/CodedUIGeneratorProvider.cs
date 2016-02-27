@@ -15,7 +15,10 @@
     /// </summary>
     public class CodedUIGeneratorProvider : IUnitTestGeneratorProvider
     {
-        protected string TESTBASE_CLASSNAME = Configuration.CodedUiGeneratorConfigSection.Instance.TestBase.Name;
+        protected string TESTBASE_CLASSNAME = ConfigurationManager.AppSettings.Get("TestBase");
+        protected string TFSSERVER_CLASSNAME = ConfigurationManager.AppSettings.Get("TfsServer");
+        protected string TFSPROJECTCOLLECTION_CLASSNAME = ConfigurationManager.AppSettings.Get("TfsProjectCollection");
+        protected string TFSPROJECT_CLASSNAME = ConfigurationManager.AppSettings.Get("TfsProject");
 
         protected const string CODEDUITEST_ATTR = "Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute";
         protected const string CATEGORY_ATTR = "Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute";
@@ -76,9 +79,12 @@
                     break;
                 }
             }
-            
-            generationContext.TestClass.BaseTypes.Add(new CodeTypeReference(TESTBASE_CLASSNAME));
-            
+
+            if (TESTBASE_CLASSNAME != null && TESTBASE_CLASSNAME != string.Empty)
+            {
+                generationContext.TestClass.BaseTypes.Add(new CodeTypeReference(TESTBASE_CLASSNAME));
+            }
+
             generationContext.TestClass.CustomAttributes.Add(
                 new CodeAttributeDeclaration(
                     new CodeTypeReference(CODEDUITEST_ATTR)));
