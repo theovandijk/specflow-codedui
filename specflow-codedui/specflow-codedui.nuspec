@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\CodedUIGenerator.SpecFlow" target="lib\net45" />
+    <file src="bin\*\CodedUIGenerator.SpecFlow" target="lib\net45" />
     <file src="..\App.config.transform" target="content\App.config.transform" />
   </files>
 </package>
