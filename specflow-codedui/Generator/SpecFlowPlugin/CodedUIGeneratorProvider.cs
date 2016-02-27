@@ -1,22 +1,21 @@
 ﻿namespace TvDijk.SpecFlowPlugin
 {
+    using System;
     using System.CodeDom;
-    //using System.Configuration;
+    using System.Collections.Generic;
+    using System.Configuration;    
+    using System.Linq;
 
     using TechTalk.SpecFlow.Generator;
     using TechTalk.SpecFlow.Generator.UnitTestProvider;
     using TechTalk.SpecFlow.Utils;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System;
-
+    
     /// <summary>
     /// The CodedUI generator.
     /// </summary>
     public class CodedUIGeneratorProvider : IUnitTestGeneratorProvider
     {
-        // TODO implement test base class name
-        //protected string TEST_BASE_NAME = ConfigurationManager.AppSettings[""];
+        protected string TESTBASE_CLASSNAME = Configuration.CodedUiGeneratorConfigSection.Instance.TestBase.Name;
 
         protected const string CODEDUITEST_ATTR = "Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute";
         protected const string CATEGORY_ATTR = "Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute";
@@ -77,11 +76,9 @@
                     break;
                 }
             }
-
-            // TODO implement possibility to inherit from test base
-            // generationContext.TestClass.BaseTypes.Add(new CodeTypeReference("TestBaseClass"));
-
-            // Add 
+            
+            generationContext.TestClass.BaseTypes.Add(new CodeTypeReference(TESTBASE_CLASSNAME));
+            
             generationContext.TestClass.CustomAttributes.Add(
                 new CodeAttributeDeclaration(
                     new CodeTypeReference(CODEDUITEST_ATTR)));
@@ -242,7 +239,7 @@
         {
             return tags == null ? new string[0] : tags.Where(t =>
                 (!t.StartsWith(OWNER_TAG, StringComparison.InvariantCultureIgnoreCase))
-                && (!t.StartsWith(WORKITEM_TAG, StringComparison.InvariantCultureIgnoreCase)) 
+                && (!t.StartsWith(WORKITEM_TAG, StringComparison.InvariantCultureIgnoreCase))
                 // TODO implement datasource
                 //&& (!t.StartsWith(DATASOURCE_TAG, StringComparison.InvariantCultureIgnoreCase))
                 )
