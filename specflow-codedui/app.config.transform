@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <codedUiGenerator>
+    <datasource type="tfs">
+      <tfsServer url="http://tfs-server.com:8080/tfs"/>
+      <tfsProjectCollection name="tfs-coll"/>
+      <tfsProject name="project"/>
+    </datasource>
+    <testbase name=""/>
+  </codedUiGenerator>
+  <specFlow>
+    <!-- For additional details on SpecFlow configuration options see http://go.specflow.org/doc-config -->
+    <plugins>
+      <add name="CodedUIGenerator" path="..\packages\TvDijk.SpecFlow.CodedUI.0.1.0.0\lib\net452" type="Generator"/>
+    </plugins>
+  </specFlow>
+</configuration>
